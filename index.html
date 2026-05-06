@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Inicio - Tienda las bendiciones</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="inicio" class="pantalla-inicio">
+    <div class="formulario">
+        <h2>Bienvenido 🛒</h2>
+
+        <input type="text" id="nombre" placeholder="Tu nombre">
+        <input type="text" id="telefono" placeholder="Tu teléfono">
+        <input type="text" id="identificacion" placeholder="Tu identificacion">
+
+        <button onclick="entrar()">Entrar</button>
+    </div>
+</div>
+    
+<header>
+    <div class="banner-fondo"></div>
+
+    <div class="header-container">
+        <img src="imagenes/logo.png" class="logo">
+        <h1>Tienda las bendiciones</h1>
+
+</header>
+<header>
+
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="promociones.html">Promociones</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+<section class="hero">
+
+    <div class="hero-contenido">
+        <h2>Bienvenidos a Tienda las Bendiciones</h2>
+        <p>Calidad, buenos precios y atención con amor</p>
+
+        <a href="productos.html">
+            <button class="btn">Ver productos</button>
+        </a>
+    </div>
+
+</section>
+<section class="contenido">
+    <h2>Sobre nuestra tienda</h2>
+    <p>Somos una tienda de barrio comprometida con nuestros clientes...</p>
+</section>
+
+<footer>
+
+    <p>© 2026 Tienda las bendiciones</p>
+
+    <div class="redes">
+        <a href="https://facebook.com" target="_blank">📘</a>
+        <a href="https://instagram.com" target="_blank">📸</a>
+        <a href="https://wa.me/573208942813" target="_blank">💬</a>
+    </div>
+<a href="https://wa.me/573208942813" class="whatsapp" target="_blank">
+    💬
+</a>
+</footer>
+<script>
+function entrar() {
+    let nombre = document.getElementById("nombre").value;
+    let telefono = document.getElementById("telefono").value;
+    let identificacion = document.getElementById("identificacion").value;
+    if (nombre === "" || telefono === "") {
+        alert("Completa tus datos");
+        return;
+    }
+    document.getElementById("inicio").style.display = "none";
+      alert("Datos guardados correctamente ✅");
+}
+</script>
+
+</body>
+
+</html>

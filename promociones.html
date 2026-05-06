@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Promociones - Tienda las bendiciones</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="header-container">
+        <img src="imagenes/logo.png" class="logo">
+        <h1>Tienda las bendiciones</h1>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="promociones.html">Promociones</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="contenido">
+
+   <h2>🔥 Promociones Especiales</h2>
+
+<div class="promo">
+    <h3>🥤 2x1 en Gaseosas</h3>
+    <p>Todos los viernes llévate 2 gaseosas por el precio de 1.</p>
+    <p class="estado" id="gaseosa-estado"></p>
+    <button id="gaseosa-btn" onclick="promoGaseosa()">Aprovechar</button>
+</div>
+
+<div class="promo">
+    <h3>🍚 Descuento en Arroz</h3>
+    <p>Por compras mayores a $100.000 recibe descuento especial.</p>
+    <p class="estado" id="arroz-estado"></p>
+    <button onclick="agregarCarrito('Arroz',2500)">Aprovechar</button>
+</div>
+
+<div class="promo">
+    <h3>🍞 Combo Desayuno</h3>
+    <p>Pan + café + leche por solo <strong>$25.000</strong>.</p>
+    <p class="estado" id="combo-estado"></p>
+    <button id="combo-btn" onclick="promoCombo()">Aprovechar</button>
+</div>
+
+<div class="promo">
+    <h3>🍪 Fin de Semana Dulce</h3>
+    <p>Galletas con descuento especial sábado y domingo.</p>
+    <p class="estado" id="dulce-estado"></p>
+    <button id="dulce-btn" onclick="agregarCarrito('Galletas',1500)">Aprovechar</button>
+</div>
+
+<div class="promo">
+    <h3>🥚 Oferta en Huevos</h3>
+    <p>Docena de huevos a precio especial esta semana.</p>
+    <p class="estado" id="huevos-estado"></p>
+    <button onclick="agregarCarrito('Huevos',10000)">Aprovechar</button>
+</div>
+</section>
+
+<footer>
+
+    <p>© 2026 Tienda las bendiciones</p>
+
+    <div class="redes">
+        <a href="#">Facebook</a>
+        <a href="#">Instagram</a>
+        <a href="#">WhatsApp</a>
+    </div>
+
+</footer>
+<script>
+let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+function guardar() {
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+}
+
+function agregarCarrito(nombre, precio) {
+    carrito.push({nombre, precio});
+    guardar();
+    console.log(carrito); // 👈 importante
+    alert(nombre + " agregado");
+}
+
+function promoGaseosa() {
+    carrito.push({nombre: "Gaseosa", precio: 4000});
+    carrito.push({nombre: "Gaseosa GRATIS", precio: 0});
+    guardar();
+    console.log(carrito); // 👈 importante
+    alert("Promo agregada");
+}
+</script>
+<script>
+
+/* CONTROL DE DÍAS */
+window.onload = function() {
+    let hoy = new Date().getDay();
+
+    // GASEOSA (viernes)
+    let gaseosa = document.getElementById("gaseosa-estado");
+    let btnGaseosa = document.getElementById("gaseosa-btn");
+
+    if (hoy === 5) {
+        gaseosa.textContent = "🔥 Disponible HOY";
+        gaseosa.style.color = "green";
+    } else {
+        gaseosa.textContent = "❌ Solo los viernes";
+        gaseosa.style.color = "red";
+        btnGaseosa.disabled = true;
+    }
+
+    // ARROZ
+    let arroz = document.getElementById("arroz-estado");
+    arroz.textContent = "✅ Disponible todos los días";
+    arroz.style.color = "green";
+
+    // COMBO (lunes a viernes)
+    let combo = document.getElementById("combo-estado");
+    let btnCombo = document.getElementById("combo-btn");
+
+    if (hoy >= 1 && hoy <= 5) {
+        combo.textContent = "🔥 Disponible HOY";
+        combo.style.color = "green";
+    } else {
+        combo.textContent = "⏰ Solo entre semana";
+        combo.style.color = "red";
+        btnCombo.disabled = true;
+    }
+
+    // DULCES (fin de semana)
+    let dulce = document.getElementById("dulce-estado");
+    let btnDulce = document.getElementById("dulce-btn");
+
+    if (hoy === 0 || hoy === 6) {
+        dulce.textContent = "🔥 Disponible HOY";
+        dulce.style.color = "green";
+    } else {
+        dulce.textContent = "⏰ Solo sábado y domingo";
+        dulce.style.color = "red";
+        btnDulce.disabled = true;
+
+    // HUEVOS
+    let huevos = document.getElementById("huevos-estado");
+    huevos.textContent = "🔥 Disponible esta semana";
+    huevos.style.color = "green";}
+};
+</script>
+</body>
+</html>

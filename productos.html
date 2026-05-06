@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Productos - Tienda las bendiciones</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+
+<header>
+    <div class="header-container">
+        <img src="imagenes/logo.png" class="logo">
+        <h1>Tienda las bendiciones</h1>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="promociones.html">Promociones</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="contenido">
+
+    <h2>🛒 Nuestros Productos</h2>
+    <input type="text" id="buscador" placeholder="🔍 Buscar producto...">
+  
+
+</div>
+<div class="carrito">
+    <h3>🛒 Carrito</h3>
+    <ul id="lista-carrito"></ul>
+    <p><strong>Total: $<span id="total">0</span></strong></p>
+
+    <a id="whatsapp" target="_blank">
+        <button>Enviar pedido</button>
+    </a>
+</div>
+
+</div>
+
+    <div class="galeria">
+
+
+<div class="producto"><h3>🍚 Arroz</h3><p>$5.000</p>
+<button onclick="agregarCarrito('Arroz', 5000)">Comprar</button></div>
+
+<div class="producto"><h3>🥛 Leche</h3><p>$5.500</p>
+<button onclick="agregarCarrito('Leche', 5500)">Comprar</button></div>
+
+<div class="producto"><h3>🍞 Pan</h3><p>$6.000</p>
+<button onclick="agregarCarrito('Pan', 6000)">Comprar</button></div>
+
+<div class="producto"><h3>🥤 Gaseosa litro</h3><p>$8.000</p>
+<button onclick="agregarCarrito('Gaseosa', 8000)">Comprar</button></div>
+
+<div class="producto"><h3>🍪 Galletas paquete ducales</h3><p>$9.000</p>
+<button onclick="agregarCarrito('Galletas', 9000)">Comprar</button></div>
+
+<div class="producto"><h3>🥚 Huevos</h3><p>$15.000</p>
+<button onclick="agregarCarrito('Huevos', 15000)">Comprar</button></div>
+
+<div class="producto"><h3>☕ Café libra</h3><p>$30.000</p>
+<button onclick="agregarCarrito('Café', 30000)">Comprar</button></div>
+
+<div class="producto"><h3>🧂 Sal libra</h3><p>$3.500</p>
+<button onclick="agregarCarrito('Sal', 3500)">Comprar</button></div>
+
+<div class="producto"><h3>🍬 Dulces</h3><p>$500</p>
+<button onclick="agregarCarrito('Dulces', 500)">Comprar</button></div>
+
+<div class="producto"><h3>🧃 jugo hit</h3><p>$5.000</p>
+<button onclick="agregarCarrito('Jugos', 5000)">Comprar</button></div>
+
+<div class="producto"><h3>🍫 Chocolate</h3><p>$4.500</p>
+<button onclick="agregarCarrito('Chocolate', 4500)">Comprar</button></div>
+
+<div class="producto"><h3>🥫 Atún</h3><p>$3.500</p>
+<button onclick="agregarCarrito('Atún', 3500)">Comprar</button></div>
+
+<div class="producto"><h3>🍝 paquete Pasta</h3><p>$2.200</p>
+<button onclick="agregarCarrito('Pasta', 2200)">Comprar</button></div>
+
+<div class="producto"><h3>🧈 Mantequilla</h3><p>$4.000</p>
+<button onclick="agregarCarrito('Mantequilla', 4000)">Comprar</button></div>
+
+<div class="producto"><h3>🧀 Queso libra</h3><p>$11.000</p>
+<button onclick="agregarCarrito('Queso', 11000)">Comprar</button></div>
+
+<div class="producto"><h3>🍗 Pollo entero</h3><p>$25.000</p>
+<button onclick="agregarCarrito('Pollo', 25000)">Comprar</button></div>
+
+<div class="producto"><h3>🥩libra Carne</h3><p>$20.000</p>
+<button onclick="agregarCarrito('Carne', 20000)">Comprar</button></div>
+
+<div class="producto"><h3>🥔 Papa arroba</h3><p>$20.000</p>
+<button onclick="agregarCarrito('Papas', 20000)">Comprar</button></div>
+
+<div class="producto"><h3>🍅 Tomate kilo</h3><p>$4.000</p>
+<button onclick="agregarCarrito('Tomate', 4000)">Comprar</button></div>
+
+<div class="producto"><h3>🧅 Cebolla kilo</h3><p>$5.000</p>
+<button onclick="agregarCarrito('Cebolla', 5000)">Comprar</button></div>
+
+<div class="producto"><h3>🥕 Zanahoria kilo</h3><p>$4.200</p>
+<button onclick="agregarCarrito('Zanahoria', 4200)">Comprar</button></div>
+
+<div class="producto"><h3>🥬 Lechuga</h3><p>$4.500</p>
+<button onclick="agregarCarrito('Lechuga', 4500)">Comprar</button></div>
+
+<div class="producto"><h3>🍌 Banano</h3><p>$2.000</p>
+<button onclick="agregarCarrito('Banano', 2000)">Comprar</button></div>
+
+<div class="producto"><h3>🍎 Manzana</h3><p>$2.500</p>
+<button onclick="agregarCarrito('Manzana', 2500)">Comprar</button></div>
+
+<div class="producto"><h3>🍊 Naranja</h3><p>$2.000</p>
+<button onclick="agregarCarrito('Naranja', 2000)">Comprar</button></div>
+
+<div class="producto"><h3>🥭 Mango</h3><p>$2.500</p>
+<button onclick="agregarCarrito('Mango', 2500)">Comprar</button></div>
+
+<div class="producto"><h3>🍍 Piña</h3><p>$3.000</p>
+<button onclick="agregarCarrito('Piña', 3000)">Comprar</button></div>
+
+<div class="producto"><h3>🍉 Sandía</h3><p>$4.000</p>
+<button onclick="agregarCarrito('Sandía', 4000)">Comprar</button></div>
+
+<div class="producto"><h3>🥥 Coco</h3><p>$8.000</p>
+<button onclick="agregarCarrito('Coco', 8000)">Comprar</button></div>
+
+<div class="producto"><h3>🍓 Fresas libra</h3><p>$7.500</p>
+<button onclick="agregarCarrito('Fresas', 7500)">Comprar</button></div>
+
+</section>
+<footer>
+
+    <p>© 2026 Tienda las bendiciones</p>
+
+    <div class="redes">
+        <a href="#">Facebook</a>
+        <a href="#">Instagram</a>
+        <a href="#">WhatsApp</a>
+    </div>
+
+</footer>
+
+<script>
+let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+let total = carrito.reduce((acc, p) => acc + p.precio, 0);
+window.onload = function() {
+    actualizarCarrito();
+};
+
+function agregarCarrito(nombre, precio) {
+    carrito.push({nombre, precio});
+    total += precio;
+
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+
+    actualizarCarrito();
+}
+function eliminarProducto(index) {
+    total -= carrito[index].precio;
+    carrito.splice(index, 1);
+
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+
+    actualizarCarrito();
+}
+function actualizarCarrito() {
+    let lista = document.getElementById("lista-carrito");
+    let totalHTML = document.getElementById("total");
+
+    lista.innerHTML = "";
+
+  carrito.forEach((p, index) => {
+    let li = document.createElement("li");
+
+    li.innerHTML = `
+        ${p.nombre} - $${p.precio}
+        <button onclick="eliminarProducto(${index})">❌</button>
+    `;
+
+    lista.appendChild(li);
+});
+    totalHTML.textContent = total;
+
+    let mensaje = "Hola, quiero pedir:%0A";
+    carrito.forEach(p => {
+        mensaje += "- " + p.nombre + " $" + p.precio + "%0A";
+    });
+    mensaje += "Total: $" + total;
+
+
+    document.getElementById("whatsapp").href =
+        "https://wa.me/573208942813?text=" + mensaje;
+        
+}
+</script>
+
+<script>
+const buscador = document.getElementById("buscador");
+
+buscador.addEventListener("keyup", function() {
+    let texto = this.value.toLowerCase();
+    let productos = document.querySelectorAll(".producto");
+
+    productos.forEach(p => {
+        let nombre = p.innerText.toLowerCase();
+        p.style.display = nombre.includes(texto) ? "block" : "none";
+    });
+});
+
+function filtrar(categoria) {
+    let productos = document.querySelectorAll(".producto");
+
+    productos.forEach(p => {
+        if (categoria === "todos" || p.dataset.categoria === categoria) {
+            p.style.display = "block";
+        } else {
+            p.style.display = "none";
+        }
+    });
+}
+</script>
+
+</body>
+</html>
